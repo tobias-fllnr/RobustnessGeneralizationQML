@@ -2,7 +2,7 @@
 
 module load spack/default
 
-module load gcc/12.3.0
+module load gcc/12.4.0
 
 module load python/3.12.1
 
