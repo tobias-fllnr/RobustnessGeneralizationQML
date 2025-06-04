@@ -1,0 +1,4 @@
+[
+    {"version": [1], "random_ids": [0], "data_labels": ["logistic_map_1000_chaos"], "learning_rates": [0.01], "num_qubits": [4], "sequence_lengths": [12], "prediction_steps": [1], "epochs": [10], "lambs": [0.0, 0.001], "trainable_encoding": ["True"]},
+    {"version": [1], "random_ids": [0], "data_labels": ["logistic_map_1000_chaos"], "learning_rates": [0.01], "num_qubits": [4], "sequence_lengths": [12], "prediction_steps": [1], "epochs": [10], "lambs": [0.0], "trainable_encoding": ["False"]}
+]
