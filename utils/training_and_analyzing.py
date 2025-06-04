@@ -6,7 +6,22 @@ import time
 import argparse
 import ast
 
-def train_and_analyse(version, num_qubits, seq_length, data_label, random_id, learning_rate, prediction_step, epochs, lamb, trainable_encoding):
+def train_and_analyse(version: int, num_qubits: int, seq_length: int, data_label: str, random_id: int, learning_rate: float, prediction_step: int, epochs: int, lamb: float, trainable_encoding: bool) -> None:
+    """
+    Trains and analyzes a quantum model using the provided parameters.
+
+    Args:
+        version (int): Version identifier for the training.
+        num_qubits (int): Number of qubits in the quantum circuit.
+        seq_length (int): Sequence length for the input data.
+        data_label (str): Label describing the type of data being processed.
+        random_id (int): Random seed for reproducibility.
+        learning_rate (float): Learning rate for the optimizer.
+        prediction_step (int): Step into the future for prediction.
+        epochs (int): Number of training epochs.
+        lamb (float): Regularization coefficient.
+        trainable_encoding (bool): Whether the encoding weights are trainable.
+    """
     model = circuit.Circuit(num_qubits=num_qubits, seq_length=seq_length, data_label=data_label, random_id=random_id, trainable_encoding=trainable_encoding)
     data_handler = DataHandling(data_label=data_label, seq_length=seq_length, prediction_step=prediction_step, random_id=random_id)
     trainer = Trainer(model=model, lamb=lamb, learning_rate=learning_rate, epochs=epochs, print_gradients=False)
